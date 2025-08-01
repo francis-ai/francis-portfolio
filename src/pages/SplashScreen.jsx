@@ -71,7 +71,8 @@ const SplashScreen = ({ onLoadingComplete }) => {
               <Typography
                 variant="h3"
                 sx={{
-                  fontWeight: 700,
+                  fontWeight: 600,
+                  textAlign: 'center',
                   background: `linear-gradient(135deg, ${
                     theme.palette.mode === 'light'
                       ? theme.palette.primary.main

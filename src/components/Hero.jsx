@@ -37,6 +37,7 @@ const Hero = ({ theme }) => {
           mx: 'auto',
           position: 'relative',
           zIndex: 1,
+          mt: 4,
           textAlign: isMobile ? 'center' : 'left',
         }}
       >
@@ -51,7 +52,8 @@ const Hero = ({ theme }) => {
             sx={{
               color: theme === 'light' ? 'secondary.dark' : 'secondary.light',
               fontWeight: 600,
-              mb: 2,
+              mb: 0,
+              mt: 6,
               letterSpacing: '2px',
             }}
           >
