@@ -6,6 +6,8 @@ import {
   Container
 } from '@mui/material';
 import { motion } from 'framer-motion';
+import AboutIntro from '../components/AboutIntro';
+import WhatICanDo from '../components/WhatICanDo';
 
 const About = () => {
  
@@ -17,7 +19,7 @@ const About = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        sx={{ mb: 6, mt: 4, textAlign: 'center' }}
+        sx={{ mb: 6, mt: 8, textAlign: 'center' }}
       >
         <Typography 
           variant="h3" 
@@ -26,7 +28,7 @@ const About = () => {
             mb: 2,
           }}
         >
-          About Me
+          Get to Know Me
         </Typography>
         <Divider 
           sx={{ 
@@ -37,6 +39,8 @@ const About = () => {
           }} 
         />
       </Box>
+      <AboutIntro />
+      <WhatICanDo />
     </Container>
   );
 };

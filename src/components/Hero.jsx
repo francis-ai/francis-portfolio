@@ -97,7 +97,7 @@ const Hero = ({ theme }) => {
               opacity: 0.9,
             }}
           >
-            Designing with purpose. Developing with passion. Delivering experiences that matter.
+            I'm a Fullstack Developer, passionate about building scalable solutions that solve real problems.
           </Typography>
         </motion.div>
 
