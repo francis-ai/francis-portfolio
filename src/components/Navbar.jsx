@@ -108,6 +108,7 @@ export default function Navbar({ theme, setTheme }) {
               <Button
                 variant="contained"
                 href="https://docs.google.com/document/d/1GysL7WcwXkVd4PztA8nYFhFwt7RtASsWU-nCC2AD2i0/edit?usp=sharing"
+                target="_blank"
                 download
                 startIcon={<DownloadIcon />}
                 sx={{
