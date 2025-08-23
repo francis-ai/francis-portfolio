@@ -55,12 +55,13 @@ const TechStack = () => {
         <Typography variant="h3" sx={{ 
           fontWeight: 800, 
           mb: 2, 
+          fontSize: {xs: 30},
           textAlign: 'center',
           background: `linear-gradient(135deg, ${theme.palette.primary.main} 0%, ${theme.palette.secondary.main} 100%)`,
           backgroundClip: 'text',
           textFillColor: 'transparent',
           WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
+          WebkitTextFillColor: 'transparent'
         }}>
           My Tech Stack
         </Typography>
