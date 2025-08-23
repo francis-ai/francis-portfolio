@@ -3,14 +3,18 @@ import {
   Box, 
   Typography, 
   Divider, 
-  Container
+  Container,
+  useTheme
 } from '@mui/material';
 import { motion } from 'framer-motion';
-import AboutIntro from '../components/AboutIntro';
-import WhatICanDo from '../components/WhatICanDo';
+import AboutIntro from '../components/about/AboutIntro';
+import WhatICanDo from '../components/about/WhatICanDo';
+import TechStack from '../components/about/TechStack';
+import Experience from '../components/about/Experience';
+import CTAButton from '../components/CTAbutton';
 
 const About = () => {
- 
+  const theme = useTheme();
 
   return (
     <Container maxWidth="lg" sx={{ py: 6 }}>
@@ -22,11 +26,16 @@ const About = () => {
         sx={{ mb: 6, mt: 8, textAlign: 'center' }}
       >
         <Typography 
-          variant="h3" 
-          sx={{ 
-            fontWeight: 700, 
-            mb: 2,
-          }}
+          variant="h3" sx={{ 
+          fontWeight: 800, 
+          mb: 2, 
+          textAlign: 'center',
+          background: `linear-gradient(135deg, ${theme.palette.primary.main} 0%, ${theme.palette.secondary.main} 100%)`,
+          backgroundClip: 'text',
+          textFillColor: 'transparent',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+        }}
         >
           Get to Know Me
         </Typography>
@@ -41,6 +50,9 @@ const About = () => {
       </Box>
       <AboutIntro />
       <WhatICanDo />
+      <TechStack/>
+      <Experience />
+      <CTAButton />
     </Container>
   );
 };
