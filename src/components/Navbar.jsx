@@ -275,7 +275,8 @@ export default function Navbar({ theme, setTheme }) {
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
             <Button 
               variant="contained"
-              href="/Francis_Oladotun_CV.pdf" 
+              href="https://docs.google.com/document/d/1GysL7WcwXkVd4PztA8nYFhFwt7RtASsWU-nCC2AD2i0/edit?usp=sharing"
+              target="_blank"
               download
               fullWidth
               startIcon={<DownloadIcon />}
