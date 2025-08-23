@@ -2,40 +2,81 @@ import React from 'react';
 import { 
   Box, 
   Typography, 
-  Divider, 
-  Container
+  Container,
+  useTheme,
 } from '@mui/material';
 import { motion } from 'framer-motion';
+import ContactForm from '../components/contact/ContactForm';
+import ContactInfo from '../components/contact/ContactInfo';
 
 const Contact = () => {
- 
+  const theme = useTheme();
 
   return (
-    <Container maxWidth="lg" sx={{ py: 6 }}>
+    <Container maxWidth="lg" sx={{ py: 8, mt: 3 }}>
       <Box 
         component={motion.div}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        sx={{ mb: 6, mt: 4, textAlign: 'center' }}
+        sx={{ mb: 8, textAlign: 'center' }}
       >
         <Typography 
           variant="h3" 
-          sx={{ 
-            fontWeight: 700, 
-            mb: 2,
+          sx={{
+            fontWeight: 800, 
+            mb: 2, 
+            fontSize: { xs: 35, md: 45 },
+            textAlign: 'center',
+            background: `linear-gradient(135deg, ${theme.palette.primary.main} 0%, ${theme.palette.secondary.main} 100%)`,
+            backgroundClip: 'text',
+            textFillColor: 'transparent',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
           }}
         >
-          Contact
+          Get In Touch
         </Typography>
-        <Divider 
+        <Typography 
+          variant="h6" 
           sx={{ 
-            width: '100px', 
-            height: '4px', 
+            maxWidth: 600, 
             mx: 'auto',
-            mb: 4
-          }} 
-        />
+            mb: 3
+          }}
+        >
+          Have a project in mind or want to collaborate? I'd love to hear from you.
+        </Typography>
+      </Box>
+
+      <Box container spacing={4}
+        sx={{
+          display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' }, // column on mobile, row on medium+
+          justifyContent: 'space-between',
+          // flexWrap: 'wrap',
+          width: { xs: '100%', md: 1200 },
+          gap: 1
+        }}
+      >
+        <Box>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <ContactForm />
+          </motion.div>
+        </Box>
+        <Box>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <ContactInfo />
+          </motion.div>
+        </Box>
       </Box>
     </Container>
   );

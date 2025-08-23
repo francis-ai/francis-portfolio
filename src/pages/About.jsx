@@ -17,7 +17,7 @@ const About = () => {
   const theme = useTheme();
 
   return (
-    <Container maxWidth="lg" sx={{ py: 6 }}>
+    <Container maxWidth="lg" sx={{ py: 6, mt: 3 }}>
       <Box 
         component={motion.div}
         initial={{ opacity: 0 }}
@@ -29,7 +29,7 @@ const About = () => {
           variant="h3" sx={{ 
           fontWeight: 800, 
           mb: 2, 
-          fontSize: {xs: 35},
+          fontSize: {xs: 35, md: 45},
           textAlign: 'center',
           background: `linear-gradient(135deg, ${theme.palette.primary.main} 0%, ${theme.palette.secondary.main} 100%)`,
           backgroundClip: 'text',
